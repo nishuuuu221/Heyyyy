@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Shreyaaa ❤️</title>
+<style>
+*{box-sizing:border-box}
+body{
+margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;
+font-family:Arial,sans-serif;background:linear-gradient(135deg,#ffdde1,#ee9ca7);
+overflow:hidden;color:#5b1833
+}
+.card{
+width:min(92%,430px);padding:35px 25px;text-align:center;
+background:rgba(255,255,255,.9);border-radius:28px;
+box-shadow:0 15px 45px rgba(100,0,40,.2)
+}
+h1{font-size:34px;margin:5px 0 15px}
+p{font-size:18px;line-height:1.6}
+.heart{font-size:65px;animation:beat 1s infinite}
+button{
+border:0;border-radius:25px;padding:13px 28px;font-size:17px;
+cursor:pointer;margin:8px;background:#e63968;color:white
+}
+#no{background:#777;position:relative}
+.hidden{display:none}
+@keyframes beat{50%{transform:scale(1.18)}}
+.float{
+position:fixed;font-size:25px;animation:rise 7s linear infinite;
+bottom:-40px
+}
+@keyframes rise{
+to{transform:translateY(-110vh) rotate(360deg);opacity:0}
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+<div class="heart">❤️</div>
+
+<h1>Shreyaaa...</h1>
+
+<p>Ek chhoti si baat kehni hai...</p>
+
+<p>
+Tum meri smile ka reason ho, meri favourite person ho,
+aur meri duniya ka sabse pyaara hissa ho. 🥹❤️
+</p>
+
+<p><b>Durvankur tumse ek sawaal poochna chahta hai...</b></p>
+
+<h2>Will you be mine forever? 💍</h2>
+
+<button onclick="yes()">YES ❤️</button>
+<button id="no" onclick="moveNo()">NO 🙈</button>
+
+<div id="reply" class="hidden">
+<h2>Yayyy! 🥹❤️</h2>
+<p>Officially, you are my favourite forever person! 💖</p>
+</div>
+
+</div>
+
+<script>
+function yes(){
+document.getElementById('reply').classList.remove('hidden');
+}
+
+function moveNo(){
+let b=document.getElementById('no');
+b.style.position='fixed';
+b.style.left=Math.random()*75+'%';
+b.style.top=Math.random()*80+'%';
+}
+
+for(let i=0;i<18;i++){
+let s=document.createElement('span');
+s.className='float';
+s.textContent='❤️';
+s.style.left=Math.random()*100+'%';
+s.style.animationDelay=Math.random()*6+'s';
+document.body.appendChild(s);
+}
+</script>
+
+</body>
+</html>
